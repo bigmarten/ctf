@@ -1,0 +1,28 @@
+http://47.102.118.76:9992/
+查看源代码:
+<!--
+error_reporting(0);
+if (isset($_GET['which']))
+{
+    $which = $_GET['which'];
+    switch ($which)
+    {
+    case 0:
+    case 1:
+    case 2:
+        require_once $which.'.php';
+         echo $flag;
+        break;
+    default:
+        echo GWF_HTML::error('PHP-0817', 'Hacker NoNoNo!', false);
+        break;
+    }
+}
+-->
+http://47.102.118.76:9992/2.php
+没有效果，访问robots.txt，或者web_payload.py跑常用url
+http://47.102.118.76:9992/robots.txt
+得到flag_is_here.php，直接访问无效，猜测路由which=flag_is_here
+http://47.102.118.76:9992/?which=flag_is_here
+得到flag:
+flag{5f1202a168b3de4477d612b24db761df}
