@@ -1,3 +1,9 @@
+安装radare2
+下载源码，解压
+https://github.com/radare/radare2    
+进入源码目录执行
+sudo sys/install.sh
+
 进入radare2程序
 radare2 /home/x64Elf-100.re
 s main  seek到main函数
@@ -24,3 +30,4 @@ C 0x0040087a -> 0x004005b0 call sym.imp.__stack_chk_fail
 s 0x004006fd　　跳转到关键函数
 pdc  反编译成ｃ代码
 pdf  反编译成汇编代码
+
