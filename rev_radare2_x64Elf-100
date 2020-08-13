@@ -9,6 +9,7 @@ radare2 /home/x64Elf-100.re
 s main  seek到main函数
 VV　查看图形化调用关系，p切换视图，空格切换视图
 vv  查看函数和汇编的关系图
+iz  查看程序中的字符串
 aaa  分析函数，aaa执行后才能afx
 afx  查看函数调用关系
 d 0x00400802 -> 0x00400937 mov edi, str.Enter_the_password:
